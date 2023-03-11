@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { HOME_URL, LOGIN_URL } from '../../constants/urls';
+import { BUSCADOR_URL, HOME_URL, LOGIN_URL, REGISTER_URL} from '../../constants/urls';
 import styles from './TopNav.module.css'
 
 function TopNav() {
@@ -7,7 +7,6 @@ function TopNav() {
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Navbar</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -17,21 +16,18 @@ function TopNav() {
                             <Link to={HOME_URL} className="nav-link active" aria-current="page" href="#">Inicio</Link>
                         </li>
                         <li className="nav-item">
-                            <a className="nav-link" href="#">Link</a>
+                            <a className="nav-link" href="#">Cartelera</a>
                         </li>
                         <li className="nav-item dropdown">
                             <a className="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                Dropdown
+                                Ingresar
                             </a>
                             <ul className="dropdown-menu">
-                                <li><a className="dropdown-item" href="#">Action</a></li>
-                                <li><a className="dropdown-item" href="#">Another action</a></li>
-                                <li><hr className="dropdown-divider"/></li>
-                                <li><a className="dropdown-item" href="#">Something else here</a></li>
+                                <li><a className="dropdown-item" href="#"></a></li>
+                                <li><Link to={LOGIN_URL} className="nav-link active" aria-current="page" href="#">Inicio Sesión</Link></li>
+                                <li><Link to={REGISTER_URL} className="nav-link active" aria-current="page" href="#">Registro</Link></li>
+                                <li><Link to={BUSCADOR_URL} className="nav-link active" aria-current="page" href="#">Buscador</Link></li>
                             </ul>
-                        </li>
-                        <li className="nav-item">
-                            <a className="nav-link disabled">Disabled</a>
                         </li>
                     </ul>
                     <form className="d-flex" role="search">
@@ -44,5 +40,7 @@ function TopNav() {
     </div>
   );
 }
+
+// <li><Link to={REGISTER_URL} className="nav-link active" aria-current="page" href="#">Registro</Link></li>
 
 export default TopNav

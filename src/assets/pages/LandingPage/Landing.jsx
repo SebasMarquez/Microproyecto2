@@ -4,7 +4,7 @@ import styles from './Landing.module.css'
 function Landing(){
     return(
         <div className="d-flex justify-content-evenly flex-wrap">
-            <h1>Hola xd</h1>
+            <h1>Movie Seeker</h1>
         </div>
     )
 }
