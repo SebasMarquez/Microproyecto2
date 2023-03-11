@@ -1,20 +1,16 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, GoogleAuthProvider } from "firebase/auth";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-
+import { getAuth } from "firebase/auth";
 const firebaseConfig = {
-  apiKey: "AIzaSyAwCJfsPCcS8yJsAREo32ABhO_glCsjwm4",
-  authDomain: "microproyecto2-292ec.firebaseapp.com",
-  projectId: "microproyecto2-292ec",
-  storageBucket: "microproyecto2-292ec.appspot.com",
-  messagingSenderId: "892788369618",
-  appId: "1:892788369618:web:5341432531743cb27e650b",
-  measurementId: "G-7B6QQB4JMZ"
+  apiKey: "AIzaSyA-63OilT6o7VyjEzLBpeMcHdUypHmwp1k",
+  authDomain: "microproyecto2-aedbb.firebaseapp.com",
+  projectId: "microproyecto2-aedbb",
+  storageBucket: "microproyecto2-aedbb.appspot.com",
+  messagingSenderId: "972853050268",
+  appId: "1:972853050268:web:e3dd1ded9752a3faf82659"
 };
 
 const app = initializeApp(firebaseConfig);
-export const auth = getAuth(app);
+export const auth = getAuth(app)
 export const db = getFirestore(app);
 export const store = getStorage(app);
 
