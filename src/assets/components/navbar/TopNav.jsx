@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+import { HOME_URL, LOGIN_URL } from '../../constants/urls';
 import styles from './TopNav.module.css'
 
 function TopNav() {
@@ -12,7 +14,7 @@ function TopNav() {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                         <li className="nav-item">
-                            <a className="nav-link active" aria-current="page" href="#">Home</a>
+                            <Link to={HOME_URL} className="nav-link active" aria-current="page" href="#">Inicio</Link>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="#">Link</a>
