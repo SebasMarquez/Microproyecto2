@@ -1,0 +1,13 @@
+.button1 {
+    background-color: #8D4C98;
+    width: 380px;
+    height: 30;
+    margin-bottom: 15px;
+
+}
+
+.button2 {
+    background-color: white;
+    width: 380px;
+    color: black;
+}
