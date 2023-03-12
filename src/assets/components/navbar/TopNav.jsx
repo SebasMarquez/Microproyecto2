@@ -1,8 +1,16 @@
 import { Link } from 'react-router-dom';
 import { BUSCADOR_URL, CARTELERA_URL, HOME_URL, LOGIN_URL, REGISTER_URL} from '../../constants/urls';
+import { useUser } from '../../contexts/Usercontext';
+import { logout } from '../../firebase/auth-service';
 import styles from './TopNav.module.css'
 
 function TopNav() {
+    const {user} = useUser();
+
+    const handleLogOut = async () => {
+        await logout();
+    }
+    //TODO Hacer que se vean distintas opciones si hay o no hay usuarios
   return (
     <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary p-3 mb-2 bg-danger ">
