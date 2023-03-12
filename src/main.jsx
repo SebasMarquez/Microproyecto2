@@ -7,7 +7,6 @@ import { BUSCADOR_URL, CARTELERA_URL, HOME_URL,LOGIN_URL,REGISTER_URL } from './
 import Cartelera from './assets/pages/Cartelera/Cartelera';
 import { Login } from './assets/pages/LoginPage/Login';
 import { Register } from './assets/pages/RegisterPage/Register';
-//import { Buscador } from './assets/pages/Buscador/Buscador';
 import './index.css'
 
 
@@ -25,5 +24,3 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     </BrowserRouter>
   </React.StrictMode>,
 )
-
-//<Route path={BUSCADOR_URL} element = {<Buscador />}/>
