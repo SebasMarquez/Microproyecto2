@@ -5,6 +5,7 @@ import App from './App'
 import { Layout } from './assets/components/Layout/Layout'
 import { PrivateRoute } from './assets/components/PrivateRoute/PrivateRoute';
 import { BUSCADOR_URL, CARTELERA_URL, HOME_URL,LOGIN_URL,REGISTER_URL } from './assets/constants/urls'
+import Buscador from './assets/pages/Buscador/Buscador';
 import Cartelera from './assets/pages/Cartelera/Cartelera';
 import { Login } from './assets/pages/LoginPage/Login';
 import { Register } from './assets/pages/RegisterPage/Register';
@@ -20,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path = {LOGIN_URL} element={<Login />}/>
           <Route path = {REGISTER_URL} element={<Register />}/>
           <Route path = {CARTELERA_URL} element={<Cartelera />}/>
-
+          <Route path = {BUSCADOR_URL} element = {<Buscador />}/>
         </Route>
       </Routes>
     </BrowserRouter>

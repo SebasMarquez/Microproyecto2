@@ -41,7 +41,7 @@ export const Login = () => {
                     <input type="password" className="form-control" id="exampleInputPassword1" onChange={handleOnChange}/>
                 </div>
                 <div className='text-center p-3'>
-                    <button type="submit" className="btn btn-primary ">Ingrear</button>
+                    <button type="submit" className="btn btn-primary ">Ingresar</button>
                 </div>
                 
             </form>
