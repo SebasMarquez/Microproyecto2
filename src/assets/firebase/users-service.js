@@ -16,6 +16,8 @@ export async function getUserProfile(email) {
             ...item.data(),
             id: item.id,
         }));
+        const {user} = users;
+        return user;
     } else {
         return null;
     }

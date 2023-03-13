@@ -21,7 +21,7 @@ export const registerWithEmailAndPassword = async (email, password) => {
             password,
         });
     } catch (error) {
-        
+        console.error()
     }
 };
 
@@ -29,12 +29,14 @@ export const signinWithEmailAndPassword = async (email, password) => {
     try {
         const result = await signInWithEmailAndPassword(auth, email, password);
     } catch (error) {
-        
+        console.error()
     }
 };
 
 export const logout = async () => {
     try {
         await signOut(auth);
-    } catch (error) {}
+    } catch (error) {
+        console.error();
+    }
 };
