@@ -28,19 +28,22 @@ export const Login = () => {
     };
 
     return(
-        <div className='d-flex justify-content-evenly flex-wrap'>
+        <div className='d-flex justify-content-evenly flex-wrap p-5'>
             <form onSubmit={OnSubmit}>
+                <h2 class="p-5">Iniciar Sesión</h2>
                 <div className="mb-3">
-                    <label for="exampleInputEmail1" className="form-label">Email address</label>
+                    <label for="exampleInputEmail1" className="form-label">Correo Electrónico:</label>
                     <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" onChange={handleOnChange}/>
-                    <div id="emailHelp" className="form-text">We'll never share your email with anyone else.</div>
+                    
                 </div>
                 <div className="mb-3">
-                    <label for="exampleInputPassword1" className="form-label">Password</label>
+                    <label for="exampleInputPassword1" className="form-label">Contraseña:</label>
                     <input type="password" className="form-control" id="exampleInputPassword1" onChange={handleOnChange}/>
                 </div>
+                <div className='text-center p-3'>
+                    <button type="submit" className="btn btn-primary ">Ingrear</button>
+                </div>
                 
-                <button type="submit" className="btn btn-primary">Submit</button>
             </form>
         </div>
     )

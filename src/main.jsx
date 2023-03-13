@@ -19,14 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path = {HOME_URL} element={<App/>}/>
           <Route path = {LOGIN_URL} element={<Login />}/>
           <Route path = {REGISTER_URL} element={<Register />}/>
-          <Route 
-            path = {CARTELERA_URL} 
-            element={
-              <PrivateRoute>
-                <Cartelera />
-              </PrivateRoute>
-              }
-          />
+          <Route path = {CARTELERA_URL} element={<Cartelera />}/>
+
         </Route>
       </Routes>
     </BrowserRouter>
