@@ -2,9 +2,29 @@ import React from "react"
 import styles from "./Cartelera.module.css"
 import { CARTELERA_URL } from "../../constants/urls"
 import Carousel from 'react-bootstrap/Carousel';
+import { useEffect } from "react";
+import { useState } from "react";
+import { fetchMovies } from "../../utils/api";
 
-function Cartelera(){
+
+  function Cartelera(){
+  const [movies, setMovies] = useState([]);
+  const [movie, setMovie] = useState(null);
+  const [isLoading, setLoading] = useState(false);
+
+  const getMovies = async () => {
+  setLoading(true);
+  const { data } = await fetchMovies();
+  setMovies(data.results);
+  setLoading(false);
+  };
+
+  useEffect(() => {
+    getMovies()
+  },[])
+
     return(
+      <div>
         <Carousel>
         <Carousel.Item interval={1000}>
           <img
@@ -94,6 +114,8 @@ function Cartelera(){
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
+      <h1>{movies && movies[0]?.origin_title}</h1>
+      </div>
     )
 }
 export default Cartelera
